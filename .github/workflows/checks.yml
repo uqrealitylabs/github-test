@@ -1,0 +1,28 @@
+name: Checks
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+concurrency:
+  group: checks-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  names:
+    name: Names are alphabetical
+    runs-on: ubuntu-24.04
+    timeout-minutes: 1
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Check alphabetical order
+        shell: bash
+        run: awk 'NF && $0 !~ /^[[:space:]]*<!--/' name.md | LC_ALL=C sort -f -c
