@@ -1,16 +1,23 @@
-# Github Test
-This will be used as an introduction tutorial on how to use Github as a Version Control System for Unity Projects.
+# GitHub Practice
 
-## Pre-requisites
-The following software is required;
-- Git (https://git-scm.com/install/)
-- Github Account (https://github.com)
-- Git LFS (Large File Storage) (https://git-lfs.com/)
-- Github Desktop (optional but recommended if you don't like the terminal) (https://desktop.github.com/download/)
-- Github CLI (optional) (https://cli.github.com/)
+A short, hands-on introduction to using GitHub as version control for Unity projects.
 
-# Goal
-- Create a new branch with your name, change this README by adding your name, commit and push that to the repository, and then open a pull request.
-- Once the Pull Request is open, have somebody review it + review somebody else's pull request, and then merge that into main.
+## Prerequisites
 
-If at any point you are ahead, you should attempt some git exercises here: https://learngitbranching.js.org/
+- [Git](https://git-scm.com/install/)
+- A [GitHub account](https://github.com/)
+- [Git LFS](https://git-lfs.com/) for Unity's larger files
+- [GitHub Desktop](https://desktop.github.com/download/) (optional)
+- [GitHub CLI](https://cli.github.com/) (optional)
+
+## Exercise
+
+1. Create a branch named after yourself.
+2. Add your name on a new line in [`name.md`](name.md), keeping the names in alphabetical order.
+3. Commit and push your change.
+4. Open a pull request and ask somebody to review it.
+5. Review somebody else's pull request, then merge yours after approval.
+
+A GitHub Action checks the name order on pull requests and pushes to `main`.
+
+Finished early? Try the exercises at [Learn Git Branching](https://learngitbranching.js.org/).
